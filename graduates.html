@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitiruvchilar ro'yxati</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bitiruvchilar ro'yxati</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Bosh sahifa</a></li>
+                    <li><a href="institutions.html">Muassasalar</a></li>
+                    <li><a href="graduates.html">Bitiruvchilar</a></li>
+                    <li><a href="statistics.html">Statistika</a></li>
+                    <li><a href="admin.html">Admin Bo'limi</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section>
+            <h2>Bitiruvchilar ro'yxati</h2>
+            <ul id="graduateList">
+                
+            </ul>
+        </section>
+        
+        <footer>
+            <p>&copy; 2024 Monitoring tizimi. Barcha huquqlar himoyalangan.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        const institutions = [
+    { id: 1, name: "2020-yilgi bitiruvchilar", graduates: 137255 },
+    { id: 2, name: "2021-yilgi bitiruvchilar", graduates: 139654 },
+    { id: 3, name: "2022-yilgi bitiruvchilar", graduates: 146002 },
+    { id: 4, name: "2023-yilgi bitiruvchilar", graduates: 158522 },
+];
+
+// Muassasalar ro'yxatini sahifaga qo'shish
+let institutionList = document.querySelector("#graduateList");
+institutions.forEach(institution => {
+    let lii = document.createElement("li");
+    lii.innerHTML = `${institution.name}  ${institution.graduates} nafar`;
+    institutionList.appendChild(lii);
+});
+    </script>
+</body>
+</html>

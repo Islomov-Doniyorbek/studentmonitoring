@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistika</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js kutubxonasi -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Statistikalar</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Bosh sahifa</a></li>
+                    <li><a href="institutions.html">Muassasalar</a></li>
+                    <li><a href="graduates.html">Bitiruvchilar</a></li>
+                    <li><a href="statistics.html">Statistika</a></li>
+                    <li><a href="admin.html">Admin Bo'limi</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- Statistikalar bo‘limi -->
+        <section>
+            <h2>Muassasalar bo‘yicha statistikalar</h2>
+            
+            <!-- Ish bilan bandlik darajasi grafigi -->
+            <div class="chart-container">
+                <canvas id="employmentChart"></canvas>
+            </div>
+            
+            <!-- Ta'lim natijalari grafigi -->
+            <div class="chart-container">
+                <canvas id="educationChart"></canvas>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Monitoring tizimi. Barcha huquqlar himoyalangan.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // Ish bilan bandlik darajasining statistikasi uchun grafig
+const employmentData = {
+    labels: ['Toshkent', 'Samarqand', 'Farg\'ona', 'Buxoro', 'Namangan', "Qashqadaryo"],
+    datasets: [{
+        label: 'Ish bilan bandlik (%)',
+        data: [85, 70, 75, 80, 90, 82], // Taʼlim muassasalarining ish bilan bandligi darajasi
+        backgroundColor: ['#3498db', '#2ecc71', '#f39c12', '#e74c3c', '#9b59b6'],
+        borderColor: '#fff',
+        borderWidth: 1
+    }]
+};
+
+const employmentConfig = {
+    type: 'bar',
+    data: employmentData,
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            tooltip: {
+                enabled: true,
+            }
+        },
+        scales: {
+            x: {
+                beginAtZero: true
+            },
+            y: {
+                beginAtZero: true,
+                max: 100,
+            }
+        }
+    }
+};
+
+// Ta'lim natijalari bo‘yicha grafik
+const educationData = {
+    labels: ['Toshkent', 'Samarqand', 'Farg\'ona', 'Buxoro', 'Namangan', "Qashqadaryo"],
+    datasets: [{
+        label: 'O‘quvchilar o‘rtacha bahosi',
+        data: [4.5, 3.8, 4.0, 3.9, 4.3, 4.25],
+        backgroundColor: '#3498db',
+        borderColor: 'navy',
+        borderWidth: 1
+    }]
+};
+
+const educationConfig = {
+    type: 'line',
+    data: educationData,
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            tooltip: {
+                enabled: true,
+            }
+        },
+        scales: {
+            x: {
+                beginAtZero: true
+            },
+            y: {
+                beginAtZero: true,
+                max: 5,
+            }
+        }
+    }
+};
+
+// Grafiklarni yaratish
+window.onload = () => {
+    const employmentChart = new Chart(document.querySelector('#employmentChart'), employmentConfig);
+    const educationChart = new Chart(document.querySelector('#educationChart'), educationConfig);
+};
+    </script>
+</body>
+</html>

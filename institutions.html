@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muassasalar ro'yxati</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Taʼlim Muassasalari</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Bosh sahifa</a></li>
+                    <li><a href="institutions.html">Muassasalar</a></li>
+                    <li><a href="graduates.html">Bitiruvchilar</a></li>
+                    <li><a href="statistics.html">Statistika</a></li>
+                    <li><a href="admin.html">Admin Bo'limi</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section>
+            <h2>Muassasalar ro'yxati</h2>
+            <ul id="institutionList">
+                <!-- JavaScriptning to'ldiradi -->
+            </ul>
+        </section>
+        
+        <footer>
+            <p>&copy; 2024 Monitoring tizimi. Barcha huquqlar himoyalangan.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // Muassasalar ro'yxati
+const institutions = [
+    { id: 1, name: "Toshkent Davlat Texnika Universiteti", graduates: 1500 },
+    { id: 2, name: "Samarqand Texnika Universiteti", graduates: 800 },
+    { id: 3, name: "Farg'ona Davlat Universiteti", graduates: 1200 },
+    { id: 4, name: "Toshkent Davlat Agrar Universiteti", graduates: 900 },
+    { id: 5, name: "O'zbekiston Davlat San'at va Madaniyat Instituti", graduates: 500 },
+];
+
+// Muassasalar ro'yxatini sahifaga qo'shish
+let institutionList = document.querySelector("#institutionList");
+institutions.forEach(institution => {
+    let lii = document.createElement("li");
+    lii.innerHTML = `${institution.name} - ${institution.graduates} bitiruvchi`;
+    institutionList.appendChild(lii);
+});
+
+    </script>
+</body>
+</html>

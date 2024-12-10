@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Bo'limi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Admin Bo'limi</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Bosh sahifa</a></li>
+                    <li><a href="institutions.html">Muassasalar</a></li>
+                    <li><a href="graduates.html">Bitiruvchilar</a></li>
+                    <li><a href="statistics.html">Statistika</a></li>
+                    <li><a href="admin.html">Admin Bo'limi</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section>
+            <h2>Bitiruvchi qo‘shish</h2>
+            <form id="addGraduateForm">
+                <label for="name">Ism:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="institution">Muassasa:</label>
+                <input type="text" id="institution" name="institution" required>
+                
+                <label for="year">Bitiruv yili:</label>
+                <input type="number" id="year" name="year" required>
+                
+                <label for="employmentStatus">Ish bilan bandlik:</label>
+                <select id="employmentStatus" name="employmentStatus" required>
+                    <option value="Ish bilan band">Ish bilan band</option>
+                    <option value="Ishsiz">Ishsiz</option>
+                </select>
+                
+                <button type="submit" id="btnAdmin">Qo‘shish</button>
+                <button type="button" id="btnAdmin" onclick="tozalash()">Bazani o'chirish</button>
+            </form>
+
+            <h3>Bitiruvchilar ro‘yxati</h3>
+            <ul id="graduatesList">
+                <li>Karimov Farhod Shamil o'g'li, TATU, 2023, Ish bilan band</li>
+                <li>Latipov Mahmud Bunyod o'g'li, TATU, 2023, Ish bilan band</li>
+                <li>Sattarov Bekjigit Begzod o'g'li, TDTU, 2023, Ish bilan band</li>
+                <li>Zayniddinova Noila Murod qizi, TATU, 2023, Ishsiz</li>
+                <li>Nematov Behruz Sarvar o'g'li, Mirzo Ulug'bek nomidagi O'zMU, 2021, Ish bilan band</li>
+                <li>Begaliyeva Marjona Po'lat qizi, O'zDJTU, 2023, Ish bilan band</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Monitoring tizimi. Barcha huquqlar himoyalangan.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

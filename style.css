@@ -1,0 +1,163 @@
+/* Umumiy uslublar */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Bosh sarlavha */
+header {
+    text-align: center;
+    background: pink;
+    color: rgb(13, 25, 246);
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li a {
+    color: rgb(4, 71, 214);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: #004f9f;
+}
+
+section p {
+    color: #7f8c8d;
+    margin: 10px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #71db3435;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+
+section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+.chart-container {
+    width: 80%;
+    height: 400px;
+    margin: 20px auto;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #1006d450;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+button#btnAdmin {
+    background: #1006d4;
+    color: lime;
+
+}
+
+ul {
+    width: 100%;
+    position: relative;
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    /* width: 100%; */
+    background: cornflowerblue;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #2c3e50;
+    color: #fff;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #2c3e50;
+    color: #fff;
+    border-radius: 0 0 8px 8px;
+}
